@@ -7,6 +7,6 @@ services:
 
   lint:
     image: buildkite/plugin-linter
-    command: ['--id', 'skottler/kubeconform']
+    command: ['--id', 'planetscale/kubeconform']
     volumes:
       - ".:/plugin:ro"
