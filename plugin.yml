@@ -1,0 +1,15 @@
+name: Kubeconform
+description: Run kubeconform against kustomize-generated manifests
+author: https://github.com/skottler
+requirements:
+  - docker
+configuration:
+  properties:
+    path:
+      type: string
+    kustomize:
+      type: boolean
+    strict:
+      type: boolean
+  required: []
+  additionalProperties: false
