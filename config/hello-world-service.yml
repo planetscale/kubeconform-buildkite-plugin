@@ -12,9 +12,10 @@ spec:
       labels:
         run: load-balancer-example
     spec:
-      demowhatever:
+      containers:
         - name: hello-world
           image: gcr.io/google-samples/node-hello:1.0
+          helloworld: testing
           ports:
             - containerPort: 8080
               protocol: TCP
