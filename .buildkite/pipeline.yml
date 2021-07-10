@@ -15,9 +15,9 @@ steps:
     command: "echo 'run the plugin'"
     plugins:
       - docker-login#v2.0.1:
-          server: ghcr.io
-          username: planetscalebot
-          password-env: DOCKER_PASSWORD
+          server: docker.pkg.github.com
+          username: github-actions-bot
+          password-env: GITHUB_TOKEN
       - ${BUILDKITE_PULL_REQUEST_REPO:-$BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
           files: config/*.yml
           strict: true
