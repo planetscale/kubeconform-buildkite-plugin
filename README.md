@@ -9,3 +9,7 @@ steps:
           files: config/kubernetes/base/*.yml
           kustomize: true
 ```
+
+## License
+
+The contents of this repository are licensed under the Apache 2.0 License. See [LICENSE](LICENSE).
