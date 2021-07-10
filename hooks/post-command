@@ -42,8 +42,13 @@ done < <(plugin_read_list OPTIONS)
 BUILDKITE_PLUGIN_KUBECONFORM_VERSION="${BUILDKITE_PLUGIN_KUBECONFORM_VERSION:-master}"
 
 echo "+++ Running kubeconform on ${#files[@]} files"
+
+set -x
+
 if docker run --rm -v "$PWD:/mnt" --workdir "/mnt" "ghcr.io/yannh/kubeconform:$BUILDKITE_PLUGIN_KUBECONFORM_VERSION" "${options[@]+${options[@]}}" "${files[@]}"; then
   echo "Kubeconform is ✅ on specified files"
 else
   exit 1
 fi
+
+set +x
