@@ -1,11 +1,18 @@
 steps:
-  - label: run shellcheck
+  - label: Shellcheck
     plugins:
       - shellcheck#v1.1.2:
           files:
             - hooks/*
 
-  - label: ":sparkles: lint"
+  - label: "Lint :sparkles:"
     plugins:
       - plugin-linter#v2.0.0:
           id: planetscale/kubeconform
+
+  - wait
+  - label: Execute the plugin
+    path: config/kubernetes/base
+    strict: true
+    plugins:
+      ${BUILDKITE_PULL_REQUEST_REPO:-$BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
