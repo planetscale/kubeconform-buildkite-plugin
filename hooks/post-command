@@ -34,15 +34,13 @@ if [[ -z ${files:-} ]] ; then
   exit 1
 fi
 
-options="-skip CustomResourceDefinition"
-
 BUILDKITE_PLUGIN_KUBECONFORM_VERSION="${BUILDKITE_PLUGIN_KUBECONFORM_VERSION:-master}"
 
 echo "+++ Running kubeconform on ${#files[@]} files"
 
 set -x
 
-if docker run --rm -v "$PWD:/mnt" --workdir "/mnt" "ghcr.io/yannh/kubeconform:$BUILDKITE_PLUGIN_KUBECONFORM_VERSION" "${options}" "${files[@]}"; then
+if docker run --rm -v "$PWD:/mnt" --workdir "/mnt" "ghcr.io/yannh/kubeconform:$BUILDKITE_PLUGIN_KUBECONFORM_VERSION" -skip CustomResourceDefinition "${files[@]}"; then
   echo "Kubeconform is ✅ on specified files"
 else
   exit 1
