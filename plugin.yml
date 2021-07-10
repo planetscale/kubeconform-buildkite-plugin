@@ -12,5 +12,5 @@ configuration:
     strict:
       type: boolean
   required:
-    - path
+    - files
   additionalProperties: false
