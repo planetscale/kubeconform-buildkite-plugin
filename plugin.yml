@@ -11,5 +11,6 @@ configuration:
       type: boolean
     strict:
       type: boolean
-  required: []
+  required:
+    - path
   additionalProperties: false
