@@ -2,13 +2,12 @@ name: Kubeconform
 description: Run kubeconform against kustomize-generated manifests
 author: https://github.com/skottler
 requirements:
+  - bash
   - docker
 configuration:
   properties:
     files:
       type: string
-    kustomize:
-      type: boolean
   required:
     - files
   additionalProperties: false
