@@ -19,5 +19,5 @@ steps:
           username: github-actions-bot
           password-env: GITHUB_TOKEN
       - ${BUILDKITE_PULL_REQUEST_REPO:-$BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
-          files: config/*.yml
+          files: fixtures/*.yml
           strict: true
