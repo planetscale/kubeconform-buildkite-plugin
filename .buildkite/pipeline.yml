@@ -9,3 +9,11 @@ steps:
     plugins:
       - plugin-linter#v2.0.0:
           id: planetscale/kubeconform
+
+  - wait
+  - label: Execute the plugin
+    command: "echo 'run the plugin'"
+    plugins:
+      - "./":
+          path: config
+          strict: true
