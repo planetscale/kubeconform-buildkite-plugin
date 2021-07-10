@@ -1,5 +1,7 @@
 # Kubeconform Buildkite Plugin
 
+A [Buildkite plugin](https://buildkite.com/docs/agent/v3/plugins) that runs [kubeconform](https://github.com/yannh/kubeconform) against Kubernetes configurations.
+
 ## Example
 
 ```yml
