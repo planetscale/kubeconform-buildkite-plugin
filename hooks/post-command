@@ -34,7 +34,7 @@ if [[ -z ${files:-} ]] ; then
   exit 1
 fi
 
-options=("-skip CustomResourceDefinition")
+options="-skip CustomResourceDefinition"
 
 BUILDKITE_PLUGIN_KUBECONFORM_VERSION="${BUILDKITE_PLUGIN_KUBECONFORM_VERSION:-master}"
 
