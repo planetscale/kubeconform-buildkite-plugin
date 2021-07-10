@@ -6,7 +6,7 @@
 steps:
   - plugins:
       - planetscale/kubeconform#v0.0.1:
-          path: config/kubernetes/base
+          files: config/kubernetes/base/*.yml
           kustomize: true
           strict: true
 ```
