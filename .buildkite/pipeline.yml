@@ -14,6 +14,6 @@ steps:
   - label: Execute the plugin
     command: "echo 'run the plugin'"
     plugins:
-      - "./../kubeconform-buildkite-plugin": ~
+      - "./../kubeconform-buildkite-plugin":
           path: config
           strict: true
