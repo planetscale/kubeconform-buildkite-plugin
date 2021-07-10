@@ -14,6 +14,6 @@ steps:
   - label: Execute the plugin
     command: "echo 'run the plugin'"
     plugins:
-      - "./":
+      - ${BUILDKITE_PULL_REQUEST_REPO:-$BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
           path: config
           strict: true
