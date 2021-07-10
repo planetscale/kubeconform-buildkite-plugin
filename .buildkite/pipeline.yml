@@ -15,5 +15,5 @@ steps:
     command: "echo 'run the plugin'"
     plugins:
       - ${BUILDKITE_PULL_REQUEST_REPO:-$BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
-          path: config
+          files: config/*.yml
           strict: true

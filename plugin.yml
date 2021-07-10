@@ -5,7 +5,7 @@ requirements:
   - docker
 configuration:
   properties:
-    path:
+    files:
       type: string
     kustomize:
       type: boolean
