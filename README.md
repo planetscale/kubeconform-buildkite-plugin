@@ -5,7 +5,7 @@
 ```yml
 steps:
   - plugins:
-      - shellcheck#v1.1.2:
+      - planetscale/kubeconform#main:
           path: config/kubernetes/base
           kustomize: true
           strict: true
