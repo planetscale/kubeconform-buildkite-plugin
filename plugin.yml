@@ -9,8 +9,6 @@ configuration:
       type: string
     kustomize:
       type: boolean
-    strict:
-      type: boolean
   required:
     - files
   additionalProperties: false
