@@ -1,0 +1,11 @@
+steps:
+  - label: run shellcheck
+    plugins:
+      - shellcheck#v1.1.2:
+          files:
+            - hooks/*
+
+  - label: ":sparkles: lint"
+    plugins:
+      - plugin-linter#v2.0.0:
+          id: planetscale/kubeconform
