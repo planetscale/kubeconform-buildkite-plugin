@@ -9,7 +9,7 @@ This plugin runs as a [`post-command`](https://buildkite.com/docs/agent/v3/hooks
 ```yml
 steps:
   - plugins:
-      - planetscale/kubeconform#v0.0.6:
+      - planetscale/kubeconform#v0.0.8:
           files: config/kubernetes/base/*.yml
 ```
 
